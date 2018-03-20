@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Propeller Admin Dashboard">
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+
+<title>BDV Admin Dashboard</title>
+<link rel="shortcut icon" type="image/x-icon" href="../themes/images/favicon.ico">
+
+<!-- Google icon -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Bootstrap css -->
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+<!-- Propeller css -->
+<!-- build:[href] assets/css/ -->
+<link rel="stylesheet" type="text/css" href="assets/css/propeller.min.css">
+<!-- /build -->
+
+<!-- Propeller date time picker css-->
+<link rel="stylesheet" type="text/css" href="../components/datetimepicker/css/bootstrap-datetimepicker.css" />
+<link rel="stylesheet" type="text/css" href="../components/datetimepicker/css/pmd-datetimepicker.css" />
+
+
+<!-- Propeller theme css-->
+<link rel="stylesheet" type="text/css" href="themes/css/propeller-theme.css" />
+
+<!-- Propeller admin theme css-->
+<link rel="stylesheet" type="text/css" href="themes/css/propeller-admin.css">
+
+</head>
+
+<body>
+<!-- Header Starts -->
+<!--Start Nav bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top pmd-navbar pmd-z-depth">
+
+	<div class="container-fluid">
+		<div class="pmd-navbar-right-icon pull-right navigation">
+			<!-- Notifications -->
+            <div class="dropdown notification icons pmd-dropdown">
+
+				<a href="javascript:void(0)" title="Notification" class="dropdown-toggle pmd-ripple-effect"  data-toggle="dropdown" role="button" aria-expanded="true">
+					<div data-badge="3" class="material-icons md-light pmd-sm pmd-badge  pmd-badge-overlap">notifications_none</div>
+				</a>
+
+				<div class="dropdown-menu dropdown-menu-right pmd-card pmd-card-default pmd-z-depth" role="menu">
+					<!-- Card header -->
+					<div class="pmd-card-title">
+						<div class="media-body media-middle">
+							<a href="notifications.html" class="pull-right">3 new notifications</a>
+							<h3 class="pmd-card-title-text">Notifications</h3>
+						</div>
+					</div>
+
+					<!-- Notifications list -->
+					<ul class="list-group pmd-list-avatar pmd-card-list">
+						<li class="list-group-item" style="display:none">
+							<p class="notification-blank">
+								<span class="dic dic-notifications-none"></span>
+								<span>You don´t have any notifications</span>
+							</p>
+						</li>
+						<li class="list-group-item unread">
+							<a href="javascript:void(0)">
+								<div class="media-left">
+									<span class="avatar-list-img40x40">
+										<img alt="40x40" data-src="holder.js/40x40" class="img-responsive" src="../themes/images/profile-1.png" data-holder-rendered="true">
+									</span>
+								</div>
+								<div class="media-body">
+									<span class="list-group-item-heading"><span>Prathit</span> posted a new challanegs</span>
+									<span class="list-group-item-text">5 Minutes ago</span>
+								</div>
+							</a>
+						</li>
+						<li class="list-group-item">
+							<a href="javascript:void(0)">
+								<div class="media-left">
+									<span class="avatar-list-img40x40">
+										<img alt="40x40" data-src="holder.js/40x40" class="img-responsive" src="../themes/images/profile-2.png" data-holder-rendered="true">
+									</span>
+								</div>
+								<div class="media-body">
+									<span class="list-group-item-heading"><span>Keel</span> Cloned 2 challenges.</span>
+									<span class="list-group-item-text">15 Minutes ago</span>
+								</div>
+							</a>
+						</li>
+						<li class="list-group-item unread">
+							<a href="javascript:void(0)">
+								<div class="media-left">
+									<span class="avatar-list-img40x40">
+										<img alt="40x40" data-src="holder.js/40x40" class="img-responsive" src="../themes/images/profile-3.png" data-holder-rendered="true">
+									</span>
+								</div>
+
+								<div class="media-body">
+									<span class="list-group-item-heading"><span>John</span> posted new collection.</span>
+									<span class="list-group-item-text">25 Minutes ago</span>
+								</div>
+							</a>
+						</li>
+						<li class="list-group-item unread">
+							<a href="javascript:void(0)">
+								<div class="media-left">
+									<span class="avatar-list-img40x40">
+										<img alt="40x40" data-src="holder.js/40x40" class="img-responsive" src="../themes/images/profile-4.png" data-holder-rendered="true">
+									</span>
+								</div>
+								<div class="media-body">
+									<span class="list-group-item-heading"><span>Valerii</span> Shared 5 collection.</span>
+									<span class="list-group-item-text">30 Minutes ago</span>
+								</div>
+							</a>
+						</li>
+					</ul><!-- End notifications list -->
+
+				</div>
+
+
+            </div> <!-- End notifications -->
+		</div>
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons">menu</i></a>
+		  <a href="index.html" class="navbar-brand">
+		  	BDV Administrator
+		  </a>
+		</div>
+	</div>
+
+</nav><!--End Nav bar -->
+<!-- Header Ends -->
+
+<!-- Sidebar Starts -->
+<div class="pmd-sidebar-overlay"></div>
+
+<!-- Left sidebar -->
+<aside class="pmd-sidebar sidebar-default pmd-sidebar-slide-push pmd-sidebar-left pmd-sidebar-open bg-fill-darkblue sidebar-with-icons" role="navigation">
+	<ul class="nav pmd-sidebar-nav">
+
+		<!-- User info -->
+		<li class="dropdown pmd-dropdown pmd-user-info visible-xs visible-md visible-sm visible-lg">
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" aria-expandedhref="javascript:void(0);">
+				<div class="media-left">
+					<img src="../themes/images/user-icon.png" alt="New User">
+				</div>
+				<div class="media-body media-middle">BDV Admin</div>
+				<div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="login.html">Logout</a></li>
+			</ul>
+		</li><!-- End user info -->
+
+		<li>
+			<a class="pmd-ripple-effect" href="index.html">
+				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="19.83px" height="18px" viewBox="287.725 407.535 19.83 18" enable-background="new 287.725 407.535 19.83 18"
+	 xml:space="preserve">
+<g>
+	<path fill="#C9C8C8" d="M307.555,407.535h-9.108v10.264h9.108V407.535z M287.725,407.535v6.232h9.109v-6.232H287.725z
+		 M296.834,415.271h-9.109v10.264h9.109V415.271z M307.555,419.303h-9.108v6.232h9.108V419.303z"/>
+</g>
+</svg></i>
+				<span class="media-body">Dashboard</span>
+			</a>
+		</li>
+
+		<!-- <li class="dropdown pmd-dropdown">
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">
+				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="18px" height="18.001px" viewBox="0 0 18 18.001" enable-background="new 0 0 18 18.001" xml:space="preserve">
+<path fill="#C9C8C8" d="M6.188,0.001C5.232,0.001,4.5,0.732,4.5,1.688c0,0.394,0.166,0.739,0.334,1.02L5.45,3.71
+	c0.113,0.113,0.176,0.341,0.176,0.51v0.281c0,0.619-0.506,1.125-1.125,1.125H0.282c-0.169,0-0.281,0.112-0.281,0.281V17.72
+	c0,0.168,0.112,0.281,0.281,0.281h4.219c0.619,0,1.125-0.506,1.125-1.125v-0.281c0-0.168-0.063-0.397-0.176-0.509
+	c0,0-0.615-0.946-0.615-1.002C4.666,14.802,4.5,14.457,4.5,14.063c0-0.956,0.731-1.688,1.688-1.688s1.688,0.731,1.688,1.688
+	c0,0.394-0.166,0.739-0.334,1.02l-0.616,1.002c-0.056,0.112-0.176,0.341-0.176,0.509v0.281c0,0.619,0.506,1.125,1.125,1.125h4.219
+	c0.168,0,0.281-0.113,0.281-0.281V13.5c0-0.619,0.506-1.125,1.125-1.125h0.281c0.169,0,0.396,0.063,0.51,0.176
+	c0,0,0.945,0.616,1.002,0.616c0.337,0.168,0.626,0.334,1.02,0.334c0.956,0,1.687-0.731,1.687-1.687c0-0.957-0.731-1.688-1.687-1.688
+	c-0.394,0-0.738,0.166-1.02,0.334l-1.002,0.616c-0.113,0.056-0.341,0.176-0.51,0.176H13.5c-0.619,0-1.125-0.506-1.125-1.125V5.908
+	c0-0.168-0.113-0.281-0.281-0.281H7.875c-0.619,0-1.125-0.506-1.125-1.125V4.221c0-0.168,0.063-0.397,0.176-0.51
+	c0,0,0.616-0.945,0.616-1.001c0.168-0.281,0.334-0.626,0.334-1.02C7.875,0.733,7.144,0.002,6.188,0.001L6.188,0.001z"/>
+</svg></i>
+				<span class="media-body">UI Elements</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="typography.html">Typography</a></li>
+				<li><a href="icons.html">Icons</a></li>
+				<li><a href="shadow.html">Shadow</a></li>
+				<li><a href="accordion.html">Accordion</a></li>
+				<li><a href="alert.html">Alert</a></li>
+				<li><a href="badge.html">Badge</a></li>
+				<li><a href="button.html">Button</a></li>
+				<li><a href="modal.html">Modal</a></li>
+				<li><a href="dropdown.html">Dropdown</a></li>
+				<li><a href="list.html">List</a></li>
+				<li><a href="navbar.html">Navbar</a></li>
+				<li><a href="popover.html">Popover</a></li>
+				<li><a href="progressbar.html">Progressbar</a></li>
+				<!--<li><a href="sidebar.html">Sidebar</a></li> -->
+				<!-- <li><a href="tab.html">Tab</a></li>
+				<li><a href="tooltip.html">Tooltip</a></li>
+				<li><a href="card.html">Card</a></li>
+				<li><a href="floating-button.html">Floating Action Button</a></li>
+			</ul>
+		</li> -->
+		<!-- <li class="dropdown pmd-dropdown">
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">
+				<i class="material-icons media-left pmd-sm">swap_calls</i>
+				<span class="media-body">Third Party Elements</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="custom-scroll.html">Custom Scrollbar</a></li>
+				<li><a href="datetimepicker.html">Datetimepicker</a></li>
+				<li><a href="range-slider.html">Range Slider</a></li>
+				<li><a href="select2.html">Select2</a></li>
+			</ul>
+		</li>
+
+		<li class="dropdown pmd-dropdown">
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">
+				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="14.187px" height="18px" viewBox="0 0 14.187 18" enable-background="new 0 0 14.187 18" xml:space="preserve">
+<path fill="#C9C8C8" d="M0,0v18h14.187V0H0z M3.121,3.293h2.023v4.767H3.121V3.293z M11.211,14.764H2.948v-2.022h8.263V14.764
+	L11.211,14.764z M11.211,11.585H2.948V9.563h8.263V11.585L11.211,11.585z M11.211,8.407H7.455V6.385h3.756V8.407z M11.211,5.229
+	H7.455V3.207h3.756V5.229z"/>
+</svg></i>
+				<span class="media-body">Form</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="form-element.html">Form Elements</a></li>
+				<li><a href="form.html">Form Examples</a></li>
+			</ul>
+		</li> -->
+		<li class="dropdown pmd-dropdown">
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">
+				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="18px" height="12.706px" viewBox="0 0 18 12.706" enable-background="new 0 0 18 12.706" xml:space="preserve">
+<path fill="#C9C8C8" d="M0,0v12.706h18V0H0z M12.706,4.235v3.176H9.108V4.235H12.706z M8.049,4.235v3.176h-6.99V4.235H8.049z
+	 M1.059,8.47h6.99v3.177h-6.99V8.47z M9.108,11.647V8.47h3.599v3.177H9.108z M13.766,11.647V8.47h3.176v3.177H13.766z M16.942,7.412
+	h-3.176V4.235h3.176V7.412L16.942,7.412z"/>
+</svg></i>
+				<span class="media-body">Data Member</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="data-member.html">Data Member</a></li>
+				<li><a href="daftar-kehadiran.html">Daftar Kehadiran</a></li>
+			</ul>
+		</li>
+
+		<!-- <li class="dropdown pmd-dropdown">
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">
+				<i class="media-left media-middle">
+				<svg x="0px" y="0px" width="18px" height="18px" viewBox="288.64 337.535 18 18" enable-background="new 288.64 337.535 18 18" xml:space="preserve">
+					<title>022-layout view</title>
+					<desc>Created with Sketch.</desc>
+					<g>
+						<g>
+							<path fill="#C9C8C8" d="M298.765,353.285v-2.25h3.375v-3.375h2.25v5.625H298.765z M290.89,347.66h2.25v3.375h3.375v2.25h-5.625
+								V347.66z M296.515,339.785v2.25h-3.375v3.375h-2.25v-5.625H296.515z M295.39,348.785h4.5v-4.5h-4.5V348.785z M304.39,345.41h-2.25
+								v-3.375h-3.375v-2.25h5.625V345.41z M288.64,355.535h18v-18h-18V355.535z"/>
+						</g>
+					</g>
+					<text transform="matrix(1 0 0 1 -0.0154 1202.2578)" font-family="'HelveticaNeue-Bold'" font-size="186.0251">Created by Richard Wearn</text>
+					<text transform="matrix(1 0 0 1 -0.0154 1388.2891)" font-family="'HelveticaNeue-Bold'" font-size="186.0251">from the Noun Project</text>
+				</svg></i>
+				<span class="media-body">Pages</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="404.html">404</a></li>
+				<li><a href="blank.html">Blank</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			</ul>
+		</li>
+		<li>
+			<a class="pmd-ripple-effect" href="login.html">
+				<i class="media-left media-middle">
+				<svg version="1.1" id="Layer_1" x="0px" y="0px" width="18px" height="18px" viewBox="288.64 337.535 18 18" enable-background="new 288.64 337.535 18 18" xml:space="preserve">
+				<path fill="#C9C8C8" d="M295.39,337.535v2.25h9v13.5h-9v2.25h11.25v-18H295.39z M297.64,342.035v3.375h-9v2.25h9v3.375l3.375-3.375
+					l1.125-1.125l-1.125-1.125L297.64,342.035z"/>
+				</svg></i>
+				<span class="media-body">Login</span>
+			</a>
+		</li>
+		<li>
+			<a class="pmd-ripple-effect" href="inbox.html">
+				<i class="media-left media-middle">
+				<svg version="1.1" x="0px" y="0px" width="18px" height="12.479px" viewBox="288.64 363.118 18 12.479" enable-background="new 288.64 363.118 18 12.479" xml:space="preserve">
+					<g transform="translate(641.29613,1096.2351)">
+						<path fill="#C9C8C8" d="M-352.656-726.466v-5.828l4.484,4.484c2.467,2.466,4.499,4.484,4.516,4.484s2.049-2.018,4.516-4.484
+							l4.484-4.484v5.828v5.828h-9h-9V-726.466z M-347.854-728.929l-4.188-4.188h8.385h8.386l-4.188,4.188
+							c-2.304,2.303-4.192,4.188-4.198,4.188S-345.551-726.626-347.854-728.929z"/>
+					</g>
+				</svg></i>
+				<span class="media-body">Inbox</span>
+			</a>
+		</li>
+		<li>
+			<a class="pmd-ripple-effect" href="notifications.html">
+				<i class="media-left media-middle">
+				<svg version="1.1" id="Layer_1" x="0px" y="0px" width="15.3px" height="18px" viewBox="289.99 337.535 15.3 18" enable-background="new 289.99 337.535 15.3 18" xml:space="preserve">
+					<g>
+						<g>
+							<path fill="#C9C8C8" d="M297.64,355.535c0.99,0,1.8-0.81,1.8-1.8h-3.6C295.84,354.725,296.65,355.535,297.64,355.535z
+								 M303.49,350.135v-4.95c0-2.79-1.891-5.041-4.501-5.67v-0.63c0-0.72-0.63-1.35-1.35-1.35c-0.72,0-1.35,0.63-1.35,1.35v0.63
+								c-2.61,0.629-4.5,2.88-4.5,5.67v4.95l-1.8,1.8v0.9h15.3v-0.9L303.49,350.135z"/>
+						</g>
+					</g>
+				</svg></i>
+				<span class="media-body">Notifications</span>
+			</a>
+		</li> -->
+
+	</ul>
+</aside><!-- End Left sidebar -->
+<!-- Sidebar Ends -->
+
+<!--content area start-->
+<div id="content" class="pmd-content content-area dashboard">
+<!--tab start-->
+    <div class="container-fluid full-width-container value-added-detail-page">
+		<div>
+			<div class="pull-right table-title-top-action">
+				<div class="range-calendar" style=" height:40px;">
+					<div class="form-group pmd-textfield">
+						<div class="input-group">
+							<input id="datetimepicker-date" type="text" class="form-control datepicker" placeholder="Choose date">
+							<div class="input-group-addon hidden-xs">
+								<svg x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+									<g>
+									<path fill="#010101" d="M-8.736-20.232c0,2.88-2.304,5.184-5.184,5.184s-5.184-2.304-5.184-5.184v-13.824
+									c0-2.88,2.304-5.184,5.184-5.184s5.184,2.304,5.184,5.184V-20.232z M41.952-34.056c0-2.88-2.304-5.184-5.185-5.184
+									c-2.879,0-5.184,2.304-5.184,5.184v13.824c0,2.88,2.305,5.184,5.184,5.184c2.881,0,5.185-2.304,5.185-5.184V-34.056z M63.84-20.923
+									V58.68c0,3.111-2.534,5.645-5.76,5.645h-92.16c-3.226,0-5.76-2.533-5.76-5.645v-79.603c0-3.11,2.534-5.645,5.76-5.645h11.52v6.336
+									c0,4.954,3.687,8.87,8.64,8.87s8.64-4.032,8.64-8.87v-6.336h33.408v6.336c0,4.954,3.687,8.87,8.64,8.87
+									c4.954,0,8.641-4.032,8.641-8.87v-6.336h12.557C61.075-26.568,63.84-24.034,63.84-20.923z M54.624-5.192
+									c0-1.152-1.036-2.189-2.304-2.189h-80.64c-1.268,0-2.304,0.921-2.304,2.189v58.227c0,1.152,1.037,2.189,2.304,2.189h80.64
+									c1.268,0,2.304-0.922,2.304-2.189V-5.192z"/>
+									</g>
+									<g>
+									<path fill="#A5A4A4" d="M7.2,4.414C7.2,5.08,6.667,5.613,6,5.613S4.8,5.08,4.8,4.414v-3.2c0-0.667,0.534-1.2,1.2-1.2
+									s1.2,0.533,1.2,1.2V4.414z M18.934,1.214c0-0.667-0.533-1.2-1.2-1.2s-1.2,0.533-1.2,1.2v3.2c0,0.666,0.533,1.199,1.2,1.199
+									s1.2-0.533,1.2-1.199V1.214z M24,4.254V22.68c0,0.721-0.587,1.307-1.333,1.307H1.333C0.586,23.986,0,23.4,0,22.68V4.254
+									c0-0.721,0.586-1.307,1.333-1.307H4v1.467c0,1.146,0.854,2.053,2,2.053s2-0.934,2-2.053V2.947h7.733v1.467
+									c0,1.146,0.854,2.053,2,2.053s2-0.934,2-2.053V2.947h2.906C23.36,2.947,24,3.533,24,4.254z M21.867,7.896
+									c0-0.268-0.24-0.507-0.534-0.507H2.667c-0.293,0-0.533,0.213-0.533,0.507v13.478c0,0.268,0.24,0.507,0.533,0.507h18.667
+									c0.294,0,0.534-0.213,0.534-0.507V7.896z"/>
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<span class="selected-date typo-fill-secondary"></span>
+				</div><!-- calendar end--></div>
+
+			<!-- Title -->
+			<h1 class="section-title" id="services">
+				<span>Daftar Kehadiran BDV</span>
+			</h1><!-- End Title -->
+			<!--breadcrum start-->
+			<ol class="breadcrumb text-left">
+			  <li><a href="index.html">Dashboard</a></li>
+			  <li class="active">Daftar Kehadiran</li>
+			</ol><!--breadcrum end-->
+
+		</div>
+
+		<!-- Table -->
+		<div class="table-responsive pmd-card pmd-z-depth">
+			<table class="table table-mc-red pmd-table">
+				<thead>
+					<tr>
+						<th>Nama</th>
+						<th>Profesi</th>
+						<th>Perusahaan</th>
+						<th>Email</th>
+						<th>Waktu Kunjungan</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td data-title="Ticket No">Muhammad Rafi</td>
+						<td data-title="Browser Name">Student</td>
+						<td data-title="Month">BDV</td>
+						<td data-title="Total">muhammadrafi@gmail.com</td>
+						<td data-title="date">2016-09-20 15:50:00</td>
+					</tr>
+					<tr>
+						<td data-title="Ticket No">Bagus Hernanda</td>
+						<td data-title="Browser Name">Student</td>
+						<td data-title="Month">Telkom</td>
+						<td data-title="Total">bagushr@gmail.com</td>
+						<td data-title="date">2016-09-21 15:50:00</td>
+					</tr>
+					<tr>
+						<td data-title="Ticket No">Arfi</td>
+						<td data-title="Browser Name">Student</td>
+						<td data-title="Month">Google</td>
+						<td data-title="Total">arfi@gmail.com</td>
+						<td data-title="date">2016-09-20 14:00:00</td>
+					</tr>
+			</tbody>
+		</table>
+		</div>
+		<!-- Card Footer -->
+		<div class="pmd-card-footer">
+		  <ul class="pmd-pagination pull-right list-inline">
+			  <span>Rows per page:</span> <span class="dropdown pmd-dropdown">
+			  <button class="btn pmd-ripple-effect pmd-btn-flat btn-link dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-expanded="false">10 <span class="caret"></span></button>
+			  <ul aria-labelledby="dropdownMenuDivider" role="menu" class="dropdown-menu">
+				  <li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">10</a></li>
+				  <li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">20</a></li>
+				  <li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">30</a></li>
+				  <li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">40</a></li>
+				  <li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">50</a></li>
+			  </ul>
+			  </span> <span>1-10 of 100</span> <a href="javascript:void(0);" aria-label="Previous"><i class="material-icons md-dark pmd-sm">keyboard_arrow_left</i></a> <a href="javascript:void(0);" aria-label="Next"><i class="material-icons md-dark pmd-sm">keyboard_arrow_right</i></a>
+		  </ul>
+		</div>
+	</div>
+</div>
+<!--tab start-->
+<!--end content area-->
+
+<!-- Footer Starts -->
+<!--footer start-->
+<footer class="admin-footer">
+ <div class="container-fluid">
+ 	<ul class="list-unstyled list-inline">
+	 	<li>
+			<span class="pmd-card-subtitle-text">Propeller &copy; <span class="auto-update-year"></span>. All Rights Reserved.</span>
+			<h3 class="pmd-card-subtitle-text">Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license.</a></h3>
+        </li>
+        <li class="pull-right download-now">
+			<a onClick="downloadPMDadmintemplate()" href="../../archive/pmd-admin-template-1.1.0.zip">
+           		 <div>
+                  <svg x="0px" y="0px" width="38px" height="32px" viewBox="0 0 38 32" enable-background="new 0 0 38 32" xml:space="preserve">
+<g>
+	<path fill="#A5A4A4" d="M13.906,26.652l4.045,4.043c0.001,0,0.002,0.002,0.003,0.004l1.047,1.047l1.047-1.049
+		c0.001,0,0.001,0,0.001,0l4.044-4.045c0.579-0.58,0.579-1.518,0-2.098c-0.579-0.578-1.519-0.578-2.096,0l-1.514,1.514V16.22
+		c0-0.818-0.664-1.482-1.483-1.482c-0.818,0-1.482,0.664-1.482,1.482v9.85l-1.515-1.516c-0.29-0.289-0.669-0.434-1.048-0.434
+		c-0.38,0-0.759,0.145-1.049,0.434C13.327,25.133,13.327,26.072,13.906,26.652z"/>
+	<g>
+		<g>
+			<path fill="#A5A4A4" d="M8.453,26.363c-0.032,0-0.065,0-0.099-0.002C3.67,26.053,0,22.137,0,17.443
+				c0-4.434,3.242-8.124,7.48-8.825c0.3-4.663,4.188-8.364,8.926-8.364c2.249,0,4.393,0.844,6.032,2.346
+				c4.602-1.86,9.527-0.766,12.266,2.831c1.808,2.375,2.399,5.513,1.671,8.719C37.416,15.412,38,17.008,38,18.65
+				c0,3.902-3.176,7.076-7.077,7.076c-1.221,0-2.428-0.32-3.492-0.926c-0.712-0.404-0.961-1.311-0.556-2.021
+				c0.404-0.713,1.312-0.963,2.021-0.557c0.619,0.352,1.319,0.539,2.027,0.539c2.267,0,4.111-1.844,4.111-4.111
+				c0-1.146-0.467-2.212-1.312-3.001l-0.673-0.627l0.264-0.881c0.769-2.574,0.416-5.094-0.969-6.913
+				c-2.061-2.706-5.997-3.332-9.577-1.522l-1.045,0.528L20.966,5.34c-1.139-1.347-2.802-2.12-4.56-2.12
+				c-3.297,0-5.979,2.683-5.979,5.979c0,0.21,0.01,0.416,0.033,0.619l0.186,1.648l-1.784-0.004
+				c-3.215,0.003-5.896,2.685-5.896,5.983c0,3.135,2.453,5.752,5.584,5.957c0.817,0.055,1.436,0.76,1.382,1.576
+				C9.88,25.762,9.228,26.363,8.453,26.363z"/>
+		</g>
+	</g>
+</g>
+</svg>
+           		 </div>
+            	 <div>
+              	 	<span class="pmd-card-subtitle-text">Version- 1.1.0</span>
+              	 	<h3 class="pmd-card-title-text">Download Now</h3>
+            	</div>
+			</a>
+        </li>
+        <li class="pull-right for-support">
+			<a href="mailto:support@propeller.in">
+          		<div>
+					<svg x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38" enable-background="new 0 0 38 38">
+<g><path fill="#A5A4A4" d="M25.621,21.085c-0.642-0.682-1.483-0.682-2.165,0c-0.521,0.521-1.003,1.002-1.524,1.523
+		c-0.16,0.16-0.24,0.16-0.44,0.08c-0.321-0.2-0.683-0.32-1.003-0.521c-1.483-0.922-2.726-2.125-3.809-3.488
+		c-0.521-0.681-1.002-1.402-1.363-2.205c-0.04-0.16-0.04-0.24,0.08-0.4c0.521-0.481,1.002-1.003,1.524-1.483
+		c0.721-0.722,0.721-1.524,0-2.246c-0.441-0.44-0.842-0.842-1.203-1.202c-0.441-0.441-0.842-0.842-1.243-1.243
+		c-0.642-0.642-1.483-0.642-2.165,0c-0.521,0.521-1.002,1.002-1.524,1.523c-0.481,0.481-0.722,1.043-0.802,1.685
+		c-0.08,1.042,0.16,2.085,0.521,3.047c0.762,2.085,1.925,3.849,3.328,5.532c1.884,2.286,4.17,4.05,6.815,5.333
+		c1.203,0.562,2.406,1.002,3.729,1.123c0.922,0.04,1.724-0.201,2.365-0.923c0.441-0.521,0.923-0.922,1.403-1.403
+		c0.682-0.722,0.682-1.563,0-2.245C27.265,22.729,26.423,21.927,25.621,21.085z"/>
+	<path fill="#A5A4A4" d="M32.437,5.568C28.869,2,24.098-0.005,19.005-0.005S9.182,2,5.573,5.568C2.005,9.177,0,13.908,0,19
+		s1.965,9.823,5.573,13.432c3.568,3.568,8.34,5.573,13.432,5.573s9.823-1.965,13.431-5.573
+		C39.854,25.014,39.854,12.985,32.437,5.568z M30.299,30.294c-3.003,3.045-7.021,4.695-11.293,4.695
+		c-4.272,0-8.291-1.65-11.294-4.695C4.666,27.29,3.016,23.271,3.016,19c0-4.272,1.649-8.291,4.695-11.294
+		c3.003-3.003,7.022-4.695,11.294-4.695c4.272,0,8.291,1.649,11.293,4.695C36.56,13.924,36.56,24.075,30.299,30.294z"/>
+</g></svg>
+            	</div>
+            	<div>
+				  <span class="pmd-card-subtitle-text">For Support</span>
+				  <h3 class="pmd-card-title-text">support@propeller.in</h3>
+				</div>
+            </a>
+        </li>
+    </ul>
+ </div>
+</footer>
+<!--footer end-->
+<!-- Footer Ends -->
+
+<!-- Scripts Starts -->
+<script src="../assets/js/jquery-1.12.2.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function() {
+		var sPath=window.location.pathname;
+		var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+		$(".pmd-sidebar-nav").each(function(){
+			$(this).find("a[href='"+sPage+"']").parents(".dropdown").addClass("open");
+			$(this).find("a[href='"+sPage+"']").parents(".dropdown").find('.dropdown-menu').css("display", "block");
+			$(this).find("a[href='"+sPage+"']").parents(".dropdown").find('a.dropdown-toggle').addClass("active");
+			$(this).find("a[href='"+sPage+"']").addClass("active");
+		});
+	});
+</script>
+<script type="text/javascript">
+(function() {
+  "use strict";
+  var toggles = document.querySelectorAll(".c-hamburger");
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  };
+  function toggleHandler(toggle) {
+    toggle.addEventListener( "click", function(e) {
+      e.preventDefault();
+      (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+    });
+  }
+
+})();
+</script>
+
+<script src="../assets/js/propeller.min.js"></script>
+
+<!-- Javascript for revenue progressbar animation effect-->
+<script>
+	function progress(percent, $element) {
+		var progressBarWidth = percent * $element.width() / 100;
+		$element.find('.progress-bar').animate({ width: progressBarWidth }, 500);
+	}
+
+	progress(50, $('.cash-progressbar'));
+	progress(30, $('.card-progressbar'));
+	progress(60, $('.wallet-progressbar'));
+	progress(40, $('.credit-progressbar'));
+	progress(10, $('.other-progressbar'));
+</script>
+<!-- Javascript for revenue progressbar animation effect-->
+
+
+<!--circle chart-->
+<script src="../themes/js/circles.min.js"></script>
+<script>
+  <!-- javascript for total sales chart-->
+		var colors = [
+			['#dfe3e7', '#f79332'], ['#dfe3e7', '#f79332'], ['#dfe3e7', '#f79332'], ['#dfe3e7', '#2ab7ee'], ['#dfe3e7', '#00719d']
+		], circles = [];
+		for (var i = 1; i <= 3; i++) {
+			var child = document.getElementById('gender-' + i),
+			percentage = child.val;
+
+			circles.push(Circles.create({
+				id:         child.id,
+				value:		percentage,
+				radius:     50,
+				width:      7,
+				colors:     colors[i - 1],
+ 				textClass:           'gender-text',
+  				styleText:           true
+			}));
+		}
+  <!-- javascript for total sales chart-->
+	</script>
+
+	<script>
+	  <!-- javascript for total sales chart-->
+			var colors = [
+				['#dfe3e7', '#f79332'], ['#dfe3e7', '#f79332'], ['#dfe3e7', '#f79332'], ['#dfe3e7', '#2ab7ee'], ['#dfe3e7', '#00719d']
+			], circles = [];
+			for (var i = 1; i <= 3; i++) {
+				var child = document.getElementById('profesi-' + i),
+				percentage = child.val;
+
+				circles.push(Circles.create({
+					id:         child.id,
+					value:		percentage,
+					radius:     50,
+					width:      7,
+					colors:     colors[i - 1],
+	 				textClass:           'profesi-text',
+	  				styleText:           true
+				}));
+			}
+	  <!-- javascript for total sales chart-->
+		</script>
+
+		<script>
+		  <!-- javascript for total sales chart-->
+				var colors = [
+					['#dfe3e7', '#f79332'], ['#dfe3e7', '#f79332'], ['#dfe3e7', '#f79332'], ['#dfe3e7', '#2ab7ee'], ['#dfe3e7', '#00719d']
+				], circles = [];
+				for (var i = 1; i <= 4; i++) {
+					var child = document.getElementById('usia-' + i),
+					percentage = child.val;
+
+					circles.push(Circles.create({
+						id:         child.id,
+						value:		percentage,
+						radius:     50,
+						width:      7,
+						colors:     colors[i - 1],
+		 				textClass:           'usia-text',
+		  				styleText:           true
+					}));
+				}
+		  <!-- javascript for total sales chart-->
+			</script>
+
+<!--staked column chart for payment-->
+<script src="../themes/js/highcharts.js"></script>
+<script src="../themes/js/highcharts-more.js"></script>
+
+<!-- Payment chart js-->
+<script>
+$(function paymentChart(){
+    $('#payment-chart').highcharts({
+        chart: {
+            type: 'column'
+        },
+		colors: "#00719d,#2ab7ee".split(","),
+        title: {
+            text: 'Last 10 days comparison',
+			style: {
+                color: "#4d575d",
+                fontSize: "14px",
+            },
+        },
+        xAxis: {
+            categories: ['9-7', '10-7', '11-7', '12-7', '13-7', '14-7', '15-7', '16-7', '17-7', '18-7']
+        },
+        yAxis: {
+            min: 0,
+			title: {
+					text: "Amount"
+			},
+			stackLabels: {
+					enabled: false,
+					style: {
+						fontWeight: 'bold',
+						color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+					}
+				}
+			},
+        legend: {
+            enabled: !0,
+            align: "right",
+            layout: "horizontal",
+            labelFormatter: function() {
+                return this.name
+            },
+            borderColor: false,
+            borderRadius: 0,
+            navigation: {
+                activeColor: "#274b6d",
+                inactiveColor: "#CCC"
+            },
+            shadow: false,
+            itemStyle: {
+                color: "#888888",
+                fontSize: "12px",
+                fontWeight: "normal"
+            },
+            itemHoverStyle: {
+                color: "#000"
+            },
+            itemHiddenStyle: {
+                color: "#CCC"
+            },
+            itemCheckboxStyle: {
+                position: "absolute"
+            },
+			symbolHeight: 10,
+			symbolWidth: 10,
+            symbolPadding: 5,
+            verticalAlign: "bottom",
+            x: 0,
+            y: 0,
+            title: {
+                style: {
+                    fontWeight: "normal"
+                }
+            }
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}',
+			backgroundColor: '#ffffff',
+			borderColor: '#f0f0f0',
+			shadow: true
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: false,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                    style: {
+                        textShadow: '0 0 3px black'
+                    }
+                }
+            }
+        },
+		 credits: {
+            enabled: false,
+        },
+        series: [{
+            name: 'Card',
+            data: [25000, 50000, 75000, 75000, 60000, 70000, 10000, 2500, 5000, 25000]
+        }, {
+            name: 'Wallet',
+            data: [75000, 50000, 25000, 25000, 30000, 30000, 90000, 25000, 3000, 50000]
+        }]
+
+    });
+});
+</script>
+
+<!--staked column chart for sms details-->
+<script>
+$( function smsChart() {
+    $('#sms-chart').highcharts({
+        chart: {
+            zoomType: 'none'
+        },
+		colors: "#e75c5c,#9159b8".split(","),
+         title: {
+            text: 'Last 7 days comparison',
+			style: {
+                color: "#4d575d",
+                fontSize: "14px",
+            },
+        },
+        xAxis: [{
+            categories: ['3-7', '4-7', '5-7', '6-7', '7-7', '8-7', '9-7']
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: 'User Count',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: 'Total Days',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            labels: {
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            opposite: true
+        }],
+		legend: {
+            enabled: !0,
+            align: "right",
+			layout: "horizontal",
+            labelFormatter: function() {
+                return this.name
+            },
+            borderColor: false,
+            borderRadius: 0,
+            navigation: {
+                activeColor: "#274b6d",
+                inactiveColor: "#CCC"
+            },
+            shadow: false,
+            itemStyle: {
+                color: "#888888",
+                fontSize: "12px",
+                fontWeight: "normal"
+            },
+            itemHoverStyle: {
+                color: "#000"
+            },
+            itemHiddenStyle: {
+                color: "#CCC"
+            },
+            itemCheckboxStyle: {
+                position: "absolute",
+                width: "12px",
+                height: "12px"
+            },
+			symbolHeight: 10,
+			symbolWidth: 10,
+            symbolPadding: 5,
+            verticalAlign: "bottom",
+            x: 0,
+            y: 0,
+            title: {
+                style: {
+                    fontWeight: "normal"
+                }
+            }
+        },
+
+        tooltip: {
+            shared: true,
+			backgroundColor: '#ffffff',
+			borderColor: '#f0f0f0',
+			shadow: true
+        },
+		 credits: {
+            enabled: false,
+        },
+
+        series: [{
+            name: 'Total Days',
+            type: 'spline',
+            yAxis: 1,
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6],
+            tooltip: {
+                pointFormat: '<span style="font-weight: bold; color: {series.color}">{series.name}</span>: '
+            }
+        }, {
+            name: 'Total Days error',
+            type: 'errorbar',
+            yAxis: 1,
+            data: [[48, 51], [68, 73], [92, 110], [128, 136], [140, 150], [171, 179], [135, 143]],
+            tooltip: {
+                pointFormat: '(error range: {point.low}-{point.high})<br/>'
+            }
+        }, {
+            name: 'User Count',
+            type: 'column',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2],
+            tooltip: {
+                pointFormat: '<span style="font-weight: bold; color: {series.color}">{series.name}</span>: <b>{point.y:.1f}</b> '
+            }
+        }, {
+            name: 'User Count error',
+            type: 'errorbar',
+            data: [[6, 8], [5.9, 7.6], [9.4, 10.4], [14.1, 15.9], [18.0, 20.1], [21.0, 24.0], [23.2, 25.3]],
+            tooltip: {
+                pointFormat: '(error range: {point.low}-{point.high})<br/>'
+            }
+        }]
+    });
+});
+</script>
+<!-- Scripts Ends -->
+<!-- Javascript for Datepicker -->
+<script type="text/javascript" language="javascript" src="../components/datetimepicker/js/moment-with-locales.js"></script>
+<script type="text/javascript" language="javascript" src="../components/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script>
+	// Linked date and time picker
+	// start date date and time picker
+	$('#datepicker-default').datetimepicker();
+	$(".auto-update-year").html(new Date().getFullYear());
+	$('#datetimepicker-date').datetimepicker({
+		 format: 'YYYY-MM-DD'
+	 });
+</script>
+
+</script>
+
+</body>
+</html>
